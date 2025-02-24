@@ -1,0 +1,241 @@
+/* General Styles */
+.login {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-image: url('../../assets/background_banner.jpg');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  padding: 20px;
+  overflow: hidden;
+}
+
+/* Dark overlay */
+.login::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 1;
+}
+
+/* Ensures content is above overlay */
+.login * {
+  position: relative;
+  z-index: 2;
+}
+
+/* Logo Styling */
+.login-logo {
+  width: 180px;
+  margin-bottom: 20px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* Login Form */
+.login-form {
+  width: 100%;
+  max-width: 400px;
+  background: rgba(0, 0, 0, 0.75);
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  animation: slideUp 1s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+/* Heading */
+.login-form h1 {
+  font-size: 28px;
+  color: white;
+  margin-bottom: 20px;
+  transition: color 0.3s ease;
+}
+
+/* Input Fields */
+.login-form input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: none;
+  border-radius: 5px;
+  background: rgb(51, 51, 51);
+  color: white;
+  font-size: 16px;
+  outline: none;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Input Focus Effect */
+.login-form input:focus {
+  background: rgb(70, 70, 70);
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.4);
+}
+
+/* Placeholder Styling */
+.login-form input::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+  transition: opacity 0.3s ease;
+}
+
+/* Button */
+.login-form button {
+  width: 100%;
+  padding: 12px;
+  background: rgb(229, 9, 20);
+  color: white;
+  font-size: 18px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: bold;
+}
+
+.login-form button:hover {
+  background: rgb(178, 7, 16);
+  box-shadow: 0px 4px 10px rgba(229, 9, 20, 0.5);
+  transform: translateY(-2px);
+}
+
+/* Remember Me & Help */
+.form-help {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 15px;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 14px;
+  transition: color 0.3s ease;
+}
+
+.form-help p:hover {
+  color: white;
+}
+
+/* Remember Me Section */
+.remember {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Custom Checkbox Styling */
+.remember input[type="checkbox"] {
+  width: 14px;
+  height: 14px;
+  appearance: none;
+  border: 2px solid white;
+  background: transparent;
+  border-radius: 3px;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Checkbox Checked Effect */
+.remember input[type="checkbox"]:checked {
+  background: rgb(30, 140, 200);
+  border-color: rgb(30, 140, 200);
+}
+
+/* Tick Symbol */
+.remember input[type="checkbox"]:checked::after {
+  content: "✔";
+  color: white;
+  font-size: 10px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Checkbox Hover Effect */
+.remember input[type="checkbox"]:hover {
+  border-color: rgb(30, 140, 200);
+}
+
+/* Remember Me Text */
+.remember label {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.7);
+  transition: color 0.3s ease;
+}
+
+/* Form Switch */
+.form-switch {
+  margin-top: 20px;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 14px;
+}
+
+.form-switch span {
+  color: white;
+  cursor: pointer;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.form-switch span:hover {
+  color: rgb(229, 9, 20);
+  transform: scale(1.1);
+}
+
+.netflix-spinner{
+  width:100%;
+  height:100vh;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+}
+.netflix-spinner img{
+  width:100px;
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Slide-up Animation */
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .login-form {
+    padding: 30px;
+    width: 90%;
+  }
+  
+  .login-logo {
+    width: 150px;
+  }
+  
+  .login-form h1 {
+    font-size: 24px;
+  }
+  
+  .login-form button {
+    font-size: 16px;
+  }
+}
