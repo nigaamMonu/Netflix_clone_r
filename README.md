@@ -50,8 +50,6 @@ A fully responsive Netflix Clone built using **React.js** and **Redux Toolkit**,
  ├── 📜 index.js          # Entry Point
 ```
 
-## Screenshots
-(You can add some images of your UI here)
 
 ## Future Enhancements
 - 🎬 **Movie API Integration** for real movie data
